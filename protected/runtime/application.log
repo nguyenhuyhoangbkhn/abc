@@ -1,0 +1,783 @@
+2015/10/18 17:23:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'testdrive'' in /var/www/yii_framework/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /var/www/yii_framework/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /var/www/yii_framework/framework/db/CDbConnection.php(325): CDbConnection->setActive(true)
+#2 /var/www/yii_framework/framework/base/CModule.php(394): CDbConnection->init()
+#3 /var/www/yii_framework/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /var/www/yii_framework/framework/gii/generators/model/ModelCode.php(60): CModule->__get('db')
+#5 /var/www/yii_framework/framework/web/CFormModel.php(39): ModelCode->init()
+#6 /var/www/yii_framework/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /var/www/yii_framework/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /var/www/yii_framework/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /var/www/yii_framework/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii_framework/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/traodoido1/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/traodoido1/index.php?r=gii/model/index
+---
+2015/10/18 21:16:58 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in /var/www/traodoido1/protected/controllers/PostController.php (72)
+in /var/www/traodoido1/index.php (13)
+2015/10/18 21:16:58 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in /var/www/traodoido1/protected/controllers/PostController.php (72)
+in /var/www/traodoido1/index.php (13)
+2015/10/18 21:16:58 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in /var/www/traodoido1/protected/controllers/PostController.php (72)
+in /var/www/traodoido1/index.php (13)
+2015/10/18 21:17:53 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in /var/www/traodoido1/protected/controllers/PostController.php (72)
+in /var/www/traodoido1/index.php (13)
+2015/10/18 21:17:53 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in /var/www/traodoido1/protected/controllers/PostController.php (72)
+in /var/www/traodoido1/index.php (13)
+2015/10/18 21:17:53 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in /var/www/traodoido1/protected/controllers/PostController.php (72)
+in /var/www/traodoido1/index.php (13)
+2015/10/18 21:23:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=a&limit=10&timestamp=1445178225311
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:24:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=y&limit=10&timestamp=1445178261447
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:24:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=yii&limit=10&timestamp=1445178266097
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:25:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=y&limit=10&timestamp=1445178313316
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:25:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=yii&limit=10&timestamp=1445178317113
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:27:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=y&limit=10&timestamp=1445178454730
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:27:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=yi&limit=10&timestamp=1445178455179
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:28:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=y&limit=10&timestamp=1445178525492
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:28:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=yi&limit=10&timestamp=1445178536451
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:28:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=yii&limit=10&timestamp=1445178536896
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:30:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=y&limit=10&timestamp=1445178658910
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:31:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=yii&limit=10&timestamp=1445178660662
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:33:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=y&limit=10&timestamp=1445178805639
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:33:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=yi&limit=10&timestamp=1445178808349
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:34:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=a&limit=10&timestamp=1445178855927
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:34:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=yii&limit=10&timestamp=1445178859933
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:34:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=yii&limit=10&timestamp=1445178866412
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:36:08 [error] [exception.CException] exception 'CException' with message 'Property "Post._oldTags" is not defined.' in /var/www/yii_framework/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(161): CComponent->__set('_oldTags', 'edf')
+#1 /var/www/traodoido1/protected/models/Post.php(96): CActiveRecord->__set('_oldTags', 'edf')
+#2 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(1871): Post->afterFind()
+#3 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(1892): CActiveRecord->populateRecord(Array, true)
+#4 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(1356): CActiveRecord->populateRecords(Array, true, NULL)
+#5 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#6 /var/www/yii_framework/framework/web/CActiveDataProvider.php(199): CActiveRecord->findAll(Object(CDbCriteria))
+#7 /var/www/yii_framework/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 /var/www/yii_framework/framework/zii/widgets/CBaseListView.php(125): CDataProvider->getData()
+#9 /var/www/yii_framework/framework/zii/widgets/grid/CGridView.php(339): CBaseListView->init()
+#10 /var/www/yii_framework/framework/web/CBaseController.php(147): CGridView->init()
+#11 /var/www/yii_framework/framework/web/CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 /var/www/traodoido1/protected/views/post/admin.php(62): CBaseController->widget('zii.widgets.gri...', Array)
+#13 /var/www/yii_framework/framework/web/CBaseController.php(126): require('/var/www/traodo...')
+#14 /var/www/yii_framework/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/traodo...', Array, true)
+#15 /var/www/yii_framework/framework/web/CController.php(869): CBaseController->renderFile('/var/www/traodo...', Array, true)
+#16 /var/www/yii_framework/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#17 /var/www/traodoido1/protected/controllers/PostController.php(143): CController->render('admin', Array)
+#18 /var/www/yii_framework/framework/web/actions/CInlineAction.php(49): PostController->actionAdmin()
+#19 /var/www/yii_framework/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#20 /var/www/yii_framework/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 /var/www/yii_framework/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#22 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#26 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('admin')
+#28 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/admin')
+#29 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#30 /var/www/traodoido1/index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/admin
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:36:40 [error] [exception.CException] exception 'CException' with message 'Property "Post._oldTags" is not defined.' in /var/www/yii_framework/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(161): CComponent->__set('_oldTags', 'edf')
+#1 /var/www/traodoido1/protected/models/Post.php(96): CActiveRecord->__set('_oldTags', 'edf')
+#2 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(1871): Post->afterFind()
+#3 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(1892): CActiveRecord->populateRecord(Array, true)
+#4 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(1356): CActiveRecord->populateRecords(Array, true, NULL)
+#5 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#6 /var/www/yii_framework/framework/web/CActiveDataProvider.php(199): CActiveRecord->findAll(Object(CDbCriteria))
+#7 /var/www/yii_framework/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 /var/www/yii_framework/framework/zii/widgets/CBaseListView.php(125): CDataProvider->getData()
+#9 /var/www/yii_framework/framework/zii/widgets/grid/CGridView.php(339): CBaseListView->init()
+#10 /var/www/yii_framework/framework/web/CBaseController.php(147): CGridView->init()
+#11 /var/www/yii_framework/framework/web/CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 /var/www/traodoido1/protected/views/post/admin.php(62): CBaseController->widget('zii.widgets.gri...', Array)
+#13 /var/www/yii_framework/framework/web/CBaseController.php(126): require('/var/www/traodo...')
+#14 /var/www/yii_framework/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/traodo...', Array, true)
+#15 /var/www/yii_framework/framework/web/CController.php(869): CBaseController->renderFile('/var/www/traodo...', Array, true)
+#16 /var/www/yii_framework/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#17 /var/www/traodoido1/protected/controllers/PostController.php(143): CController->render('admin', Array)
+#18 /var/www/yii_framework/framework/web/actions/CInlineAction.php(49): PostController->actionAdmin()
+#19 /var/www/yii_framework/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#20 /var/www/yii_framework/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 /var/www/yii_framework/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#22 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#26 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('admin')
+#28 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/admin')
+#29 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#30 /var/www/traodoido1/index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/admin
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:38:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=y&limit=10&timestamp=1445179127027
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:43:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=abc&limit=10&timestamp=1445179382511
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:43:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=abcd&limit=10&timestamp=1445179382950
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:43:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=abcd&limit=10&timestamp=1445179383538
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:44:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=a&limit=10&timestamp=1445179497523
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:44:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=ab&limit=10&timestamp=1445179499068
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:45:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=abc&limit=10&timestamp=1445179500203
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:46:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=a&limit=10&timestamp=1445179608133
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:46:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=abc&limit=10&timestamp=1445179610188
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:52:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=a&limit=10&timestamp=1445179922507
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:52:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=ab&limit=10&timestamp=1445179961157
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:52:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=a&limit=10&timestamp=1445179976678
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:52:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=ab&limit=10&timestamp=1445179977477
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:57:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=a&limit=10&timestamp=1445180224652
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:57:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=ab&limit=10&timestamp=1445180227077
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:57:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=a&limit=10&timestamp=1445180238723
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:58:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=a&limit=10&timestamp=1445180325487
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 21:58:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=abc&limit=10&timestamp=1445180329474
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 22:03:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=a&limit=10&timestamp=1445180583290
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 22:03:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=abc&limit=10&timestamp=1445180627941
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 22:05:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=tes&limit=10&timestamp=1445180705706
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 22:05:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=test&limit=10&timestamp=1445180706253
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 22:05:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=abc&limit=10&timestamp=1445180717998
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 22:06:44 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=a&limit=10&timestamp=1445180804063
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 22:12:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=a&limit=10&timestamp=1445181176817
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 22:12:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=a&limit=10&timestamp=1445181177002
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 22:14:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=a&limit=10&timestamp=1445181246858
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 22:15:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=a&limit=10&timestamp=1445181348830
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 22:15:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=bc&limit=10&timestamp=1445181350876
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 22:16:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=bc&limit=10&timestamp=1445181406501
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 22:16:54 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=book&limit=10&timestamp=1445181414769
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 22:20:26 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=bo&limit=10&timestamp=1445181626628
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/18 22:20:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/traodoido1/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=b&limit=10&timestamp=1445181645094
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
