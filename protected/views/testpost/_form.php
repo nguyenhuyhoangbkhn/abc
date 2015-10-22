@@ -1,13 +1,13 @@
 <?php
-/* @var $this PostController */
-/* @var $model Post */
+/* @var $this TestpostController */
+/* @var $model testpost */
 /* @var $form CActiveForm */
 ?>
 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'post-form',
+	'id'=>'testpost-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -38,24 +38,34 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'loai mat hang'); ?>
-		<?php $this->widget('CAutoComplete', array(
-			'model'=>$model,
-			'attribute'=>'tags',
-			'url'=>array('suggestTags'),
-			'multiple'=>true,
-			'htmlOptions'=>array('size'=>50),
-		)); ?>
-		<p class="hint">Please separate different tags with commas.</p>
+		<?php echo $form->labelEx($model,'tags'); ?>
+		<?php echo $form->textArea($model,'tags',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'tags'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->dropDownList($model,'status',Lookup::items('PostStatus')); ?>
+		<?php echo $form->textField($model,'status'); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
-	
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'create_time'); ?>
+		<?php echo $form->textField($model,'create_time'); ?>
+		<?php echo $form->error($model,'create_time'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'update_time'); ?>
+		<?php echo $form->textField($model,'update_time'); ?>
+		<?php echo $form->error($model,'update_time'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'author_id'); ?>
+		<?php echo $form->textField($model,'author_id'); ?>
+		<?php echo $form->error($model,'author_id'); ?>
+	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

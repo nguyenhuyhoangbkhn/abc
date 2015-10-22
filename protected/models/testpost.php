@@ -14,17 +14,11 @@
  * @property integer $update_time
  * @property integer $author_id
  */
-class Post extends CActiveRecord
+class testpost extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
-
-	const STATUS_DRAFT=1;
-    const STATUS_PUBLISHED=2;
-    const STATUS_ARCHIVED=3;
-    private $_oldTags;
-
 	public function tableName()
 	{
 		return '{{post}}';
@@ -38,7 +32,7 @@ class Post extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, image, content, status', 'required'),
+			array('title, image, content, status, author_id', 'required'),
 			array('status, create_time, update_time, author_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>128),
 			array('image', 'length', 'max'=>300),
@@ -115,74 +109,10 @@ class Post extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Post the static model class
+	 * @return testpost the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
-	}
-
-	public function getUrl()
-    {
-        return Yii::app()->createUrl('post/view', array(
-            'id'=>$this->id,
-            'title'=>$this->title,
-        ));
-    }
-
-	public function getTagLinks()
-	{
-		$links=array();
-		foreach(Tag::string2array($this->tags) as $tag)
-			$links[]=CHtml::link(CHtml::encode($tag), array('post/index', 'tag'=>$tag));
-		return $links;
-	}
-
-
-	public function normalizeTags($attribute,$params)
-	{
-	    $this->tags=Tag::array2string(array_unique(Tag::string2array($this->tags)));
-	}
-	/**
-	 * @return array relational rules.
-	 */
-	
-	protected function afterFind()
-	{
-		parent::afterFind();
-		$this->_oldTags=$this->tags;
-	}
-	
-    protected function beforeSave()
-	{
-		if(parent::beforeSave())
-		{
-			if($this->isNewRecord)
-			{
-				$this->create_time=$this->update_time=time();
-				$this->author_id=Yii::app()->user->id;
-			}
-			else
-				$this->update_time=time();
-			return true;
-		}
-		else
-			return false;
-	}
-	
-	protected function afterSave()
-	{
-		parent::afterSave();
-		Tag::model()->updateFrequency($this->_oldTags, $this->tags);
-	}
-
-	/**
-	 * This is invoked after the record is deleted.
-	 */
-	protected function afterDelete()
-	{
-		parent::afterDelete();
-		Comment::model()->deleteAll('post_id='.$this->id);
-		Tag::model()->updateFrequency($this->tags, '');
 	}
 }

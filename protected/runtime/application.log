@@ -934,3 +934,29 @@ Stack trace:
 REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=abc&limit=10&timestamp=1445183661928
 HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
 ---
+2015/10/22 12:22:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/traodoido1/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/traodoido1/index.php?r=post/suggestTags&q=a&limit=10&timestamp=1445491342726
+HTTP_REFERER=http://localhost/traodoido1/index.php?r=post/create
+---
+2015/10/22 12:25:11 [warning] [application] Failed to set unsafe attribute "image" of "Post".
+in /var/www/traodoido1/protected/controllers/PostController.php (67)
+in /var/www/traodoido1/index.php (13)
+2015/10/22 12:25:11 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in /var/www/traodoido1/protected/controllers/PostController.php (67)
+in /var/www/traodoido1/index.php (13)
+2015/10/22 12:25:11 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in /var/www/traodoido1/protected/controllers/PostController.php (67)
+in /var/www/traodoido1/index.php (13)
+2015/10/22 12:25:11 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in /var/www/traodoido1/protected/controllers/PostController.php (67)
+in /var/www/traodoido1/index.php (13)
+2015/10/22 12:25:54 [warning] [application] Failed to set unsafe attribute "image" of "Post".
+in /var/www/traodoido1/protected/controllers/PostController.php (67)
+in /var/www/traodoido1/index.php (13)

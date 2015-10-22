@@ -17,5 +17,9 @@
 	<?php echo CHtml::encode($data->frequency); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('image')); ?>:</b>
+	<?php echo CHtml::encode($data->image); ?>
+	<br />
+
 
 </div>

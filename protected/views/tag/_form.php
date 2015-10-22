@@ -31,6 +31,12 @@
 		<?php echo $form->error($model,'frequency'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'image'); ?>
+		<?php echo $form->textField($model,'image',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->error($model,'image'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

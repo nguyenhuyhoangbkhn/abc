@@ -1,23 +1,16 @@
 <?php
 
+/**
+ * This is the model class for table "{{tag}}".
+ *
+ * The followings are the available columns in table '{{tag}}':
+ * @property integer $id
+ * @property string $name
+ * @property integer $frequency
+ * @property string $image
+ */
 class Tag extends CActiveRecord
 {
-	/**
-	 * The followings are the available columns in table 'tbl_tag':
-	 * @var integer $id
-	 * @var string $name
-	 * @var integer $frequency
-	 */
-
-	/**
-	 * Returns the static model of the specified AR class.
-	 * @return CActiveRecord the static model class
-	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
-	}
-
 	/**
 	 * @return string the associated database table name
 	 */
@@ -34,9 +27,13 @@ class Tag extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name', 'required'),
+			array('name, frequency, image', 'required'),
 			array('frequency', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>128),
+			array('image', 'length', 'max'=>300),
+			// The following rule is used by search().
+			// @todo Please remove those attributes that should not be searched.
+			array('id, name, frequency, image', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,18 +54,43 @@ class Tag extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'Id',
+			'id' => 'ID',
 			'name' => 'Name',
 			'frequency' => 'Frequency',
+			'image' => 'Image',
 		);
 	}
- 
+
 	/**
-	 * Returns tag names and their corresponding weights.
-	 * Only the tags with the top weights will be returned.
-	 * @param integer the maximum number of tags that should be returned
-	 * @return array weights indexed by tag names.
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 *
+	 * Typical usecase:
+	 * - Initialize the model fields with values from filter form.
+	 * - Execute this method to get CActiveDataProvider instance which will filter
+	 * models according to data in model fields.
+	 * - Pass data provider to CGridView, CListView or any similar widget.
+	 *
+	 * @return CActiveDataProvider the data provider that can return the models
+	 * based on the search/filter conditions.
 	 */
+	public function search()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('id',$this->id);
+		$criteria->compare('name',$this->name,true);
+		$criteria->compare('frequency',$this->frequency);
+		$criteria->compare('image',$this->image,true);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+
+
+
 	public function findTagWeights($limit=20)
 	{
 		$models=$this->findAll(array(
@@ -142,6 +164,7 @@ class Tag extends CActiveRecord
 				$tag=new Tag;
 				$tag->name=$name;
 				$tag->frequency=1;
+				$tag->image = 'chua co anh';
 				$tag->save();
 			}
 		}
@@ -155,5 +178,16 @@ class Tag extends CActiveRecord
 		$criteria->addInCondition('name',$tags);
 		$this->updateCounters(array('frequency'=>-1),$criteria);
 		$this->deleteAll('frequency<=0');
+	}
+
+	/**
+	 * Returns the static model of the specified AR class.
+	 * Please note that you should have this exact method in all your CActiveRecord descendants!
+	 * @param string $className active record class name.
+	 * @return Tag the static model class
+	 */
+	public static function model($className=__CLASS__)
+	{
+		return parent::model($className);
 	}
 }
