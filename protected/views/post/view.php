@@ -32,3 +32,8 @@ $this->menu=array(
 		'author_id',
 	),
 )); ?>
+<h1>comments</h1>
+ 
+<?php $this->renderPartial('comment.views.comment.commentList', array(
+    'model'=>$model
+)); ?>
